@@ -45,7 +45,14 @@ const Index = () => {
           <div className="space-y-4 font-body text-lg">
             <div className="flex items-center justify-center gap-3">
               <MapPin className="w-5 h-5 text-gold-light flex-shrink-0" />
-              <span className="text-cream">Maxim & Moritz Gastrozentrum, Augsburg, Germany</span>
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=Maxim+%26+Moritz+Gastrozentrum+Augsburg+Germany" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-cream underline decoration-gold-light/40 hover:text-gold-light transition-colors cursor-pointer"
+                >
+                Gemeindezentrum Maria und Martha, Augsburg, Germany
+              </a>
             </div>
             <div className="flex items-center justify-center gap-3">
               <Calendar className="w-5 h-5 text-gold-light flex-shrink-0" />
