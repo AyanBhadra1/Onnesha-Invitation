@@ -34,10 +34,10 @@ const Index = () => {
           </p>
         </section>
 
-        {/* Event Details */}
+        {/* Event Invitation */}
         <section className="bg-maroon text-primary-foreground px-6 py-10 text-center">
           <Heart className="w-6 h-6 text-gold-light mx-auto mb-3" />
-          <h2 className="font-display text-2xl font-bold mb-1">EVENT DETAILS</h2>
+          <h2 className="font-display text-2xl font-bold mb-1">EVENT INVITATION</h2>
           <p className="font-script text-gold-light text-xl mb-6">A Night of Elegance & Celebration</p>
           <p className="font-body text-lg text-cream/90 mb-6 leading-relaxed">
             Please join us for an evening of dinner and festivities. We look forward to sharing this fabulous occasion with our dearest friends and relatives.
