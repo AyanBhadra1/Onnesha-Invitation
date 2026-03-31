@@ -27,7 +27,7 @@ const Index = () => {
         {/* Celebrating Section */}
         <section className="bg-cream px-6 py-10 text-center">
           <Sparkles className="w-6 h-6 text-gold mx-auto mb-3" />
-          <h2 className="font-display text-2xl font-bold text-maroon mb-1">CELEBRATING ONNESHA</h2>
+          <h2 className="font-display text-2xl font-bold text-maroon mb-1">CELEBRATING ONNESHA'S 18<sup className="text-lg">TH</sup> BIRTHDAY</h2>
           <p className="font-script text-gold text-xl mb-4">The Heart of Our Home & A Bright Future Ahead</p>
           <p className="font-body text-lg text-foreground leading-relaxed">
             Onnesha has always filled our lives with laughter and grace. As she steps into adulthood, we want to honor her journey, her passions, and the wonderful person she has become.
