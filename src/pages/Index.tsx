@@ -91,18 +91,27 @@ const Index = () => {
           </div>
 
           <div className="space-y-8 relative border-l border-gold-light/20 ml-4 pl-6">
-            {/* 1:00 PM - Welcome */}
+            
+            {/* 12:30 PM - Welcome */}
+            <div className="relative">
+              <div className="absolute -left-[35px] mt-1 flex items-center justify-center w-4 h-4 rounded-full bg-gold-light" />
+              <div className="font-bold text-cream">12:30 PM</div>
+              <div className="text-gold-light font-semibold uppercase tracking-tight">Welcome Greeting</div>
+              <p className="text-cream/70 text-sm mt-1">A warm reception for our arriving guests.</p>
+            </div>
+
+            {/* 1:00 PM - Lunch */}
             <div className="relative">
               <div className="absolute -left-[35px] mt-1 flex items-center justify-center w-4 h-4 rounded-full bg-gold-light" />
               <div className="font-bold text-cream">1:00 PM</div>
-              <div className="text-gold-light font-semibold">Welcome Greeting & Lunch</div>
-              <p className="text-cream/70 text-sm mt-1">A warm reception followed by a festive luncheon.</p>
+              <div className="text-gold-light font-semibold uppercase tracking-tight">Festive Luncheon</div>
+              <p className="text-cream/70 text-sm mt-1">A grand lunch shared with friends and family.</p>
             </div>
 
-            {/* 2:00 PM - Show Program */}
+            {/* 2:30 PM - Show Program */}
             <div className="relative">
               <div className="absolute -left-[35px] mt-1 flex items-center justify-center w-4 h-4 rounded-full bg-gold-light" />
-              <div className="font-bold text-cream">2:00 PM</div>
+              <div className="font-bold text-cream">2:30 PM</div>
               <div className="text-gold-light font-semibold mb-3 uppercase tracking-tighter">Grand Show Program</div>
               <div className="space-y-3 text-sm border-l border-gold-light/30 pl-4 ml-1">
                 <div><span className="text-gold-light font-medium">Opening Dance:</span> <span className="text-cream">Moyuri — Medley (O Re Priya)</span></div>
@@ -138,6 +147,7 @@ const Index = () => {
             </div>
           </div>
         </section>
+
 
         {/* Footer */}
         <footer className="bg-maroon px-6 py-10 text-center">
