@@ -56,7 +56,18 @@ const Index = () => {
             </div>
             <div className="flex items-center justify-center gap-3">
               <Calendar className="w-5 h-5 text-gold-light flex-shrink-0" />
-              <span className="text-cream">May 23rd, 2026</span>
+              <span className="text-cream">Saturday, May 23rd, 2026</span>
+            </div>
+            </div>
+            <div className="flex items-center justify-center gap-3">
+              <Clock className="w-5 h-5 text-gold-light flex-shrink-0" />
+              <span className="text-cream">Starting at 12:30 PM</span>
+            </div>
+
+            {/* Moderators */}
+            <div className="pt-4 border-t border-gold-light/20 mt-4">
+              <p className="text-gold-light font-script text-xl mb-1">Moderators:</p>
+              <p className="text-cream font-semibold tracking-wide">Shagor & Viola</p>
             </div>
           </div>
         </section>
@@ -74,36 +85,89 @@ const Index = () => {
 
         {/* Program Itinerary */}
         <section className="bg-maroon-deep text-primary-foreground px-6 py-10">
-          <div className="text-center mb-6">
+          <div className="text-center mb-8">
             <Sparkles className="w-6 h-6 text-gold-light mx-auto mb-3" />
-            <h2 className="font-display text-2xl font-bold">PROGRAM ITINERARY</h2>
+            <h2 className="font-display text-2xl font-bold tracking-widest">PROGRAM SCHEDULE</h2>
             <p className="font-script text-gold-light text-xl mt-1">A Day of Joy & Celebration</p>
-            <p className="font-body text-cream/80 text-base mt-2">
-              We have planned a delightful afternoon to honor this special milestone. Please find the schedule of events below:
-            </p>
           </div>
-          <div className="space-y-4 font-body text-base">
-            {[
-              { time: "Upto 2 PM", title: "Festive Luncheon", desc: "A grand lunch will be served to welcome our guests." },
-              { time: "2 PM – 4 PM", title: "Commencement of Festivities", desc: "The formal celebration and birthday program begins immediately following lunch." },
-              { time: "4 PM", title: "The Grand Cake Cutting", desc: "Join us for the highlight of the afternoon as Onnesha cuts her 18th birthday cake." },
-              { time: "4 PM onwards", title: "Cultural Performances", desc: "The celebration continues with a special sequence of traditional and contemporary dance performances, culminating in an open floor for all to join the festivities." },
-            ].map((item, i) => (
-              <div key={i} className="flex gap-2 items-start">
-                <span className="text-gold-light font-semibold text-base min-w-0">•</span>
-                <div>
-                  <span className="font-semibold text-cream">{item.time} | {item.title}</span>
-                  <p className="text-cream/80 mt-0.5">{item.desc}</p>
+
+          <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gold-light/30 before:to-transparent">
+            
+            {/* 1:00 PM - Welcome */}
+            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-gold-light bg-maroon text-gold-light font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                <Clock className="w-5 h-5" />
+              </div>
+              <div className="w-[calc(100%-4rem)] md:w-[45%] p-4 rounded border border-gold-light/20 bg-maroon/50">
+                <div className="flex items-center justify-between space-x-2 mb-1">
+                  <div className="font-bold text-cream">1:00 PM</div>
+                </div>
+                <div className="text-gold-light font-semibold">Welcome Greeting & Lunch</div>
+                <p className="text-cream/70 text-sm mt-1">A warm reception followed by a festive luncheon.</p>
+              </div>
+            </div>
+
+            {/* 2:00 PM - Show Program */}
+            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-gold-light bg-maroon text-gold-light font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                <Sparkles className="w-5 h-5" />
+              </div>
+              <div className="w-[calc(100%-4rem)] md:w-[45%] p-4 rounded border border-gold-light/20 bg-maroon/50">
+                <div className="font-bold text-cream mb-1">2:00 PM</div>
+                <div className="text-gold-light font-semibold mb-3 uppercase tracking-tighter">Grand Show Program</div>
+                
+                {/* Detailed Performance List */}
+                <div className="space-y-3 text-sm border-l border-gold-light/30 pl-4 ml-1">
+                  <div><span className="text-gold-light font-medium">Opening Dance:</span> <span className="text-cream">Moyuri — Medley (O Re Priya)</span></div>
+                  <div><span className="text-gold-light font-medium">Vocal:</span> <span className="text-cream">Extended Family — Anondo Lokee</span></div>
+                  <div><span className="text-gold-light font-medium">Speech:</span> <span className="text-cream">Message from Parents</span></div>
+                  <div><span className="text-gold-light font-medium">Bharatanatyam:</span> <span className="text-cream">Richa Kumari</span></div>
+                  <div><span className="text-gold-light font-medium">Vocal:</span> <span className="text-cream">Saikat Uncle</span></div>
+                  <div><span className="text-gold-light font-medium">Dance:</span> <span className="text-cream">Saima & Onnesha — Medley</span></div>
+                  <div><span className="text-gold-light font-medium">Violin:</span> <span className="text-cream">Shruti</span></div>
+                  <div><span className="text-gold-light font-medium">Dance:</span> <span className="text-cream">Auditi Aunty & Tupur</span></div>
+                  <div><span className="text-gold-light font-medium">Vocal:</span> <span className="text-cream">Tultul</span></div>
+                  <div><span className="text-gold-light font-medium">Dance:</span> <span className="text-cream">Soheli Aunty</span></div>
+                  <div><span className="text-gold-light font-medium">Speech:</span> <span className="text-cream">Special Guest</span></div>
+                  <div><span className="text-gold-light font-medium">Dance:</span> <span className="text-cream">Moyuri — Medley</span></div>
+                  <div><span className="text-gold-light font-medium">Surprise:</span> <span className="text-cream">Interactive Dance & Games</span></div>
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* 4:15 PM - Cake */}
+            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-gold-light bg-maroon text-gold-light font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                <Heart className="w-5 h-5" />
+              </div>
+              <div className="w-[calc(100%-4rem)] md:w-[45%] p-4 rounded border border-gold-light/20 bg-maroon/50">
+                <div className="font-bold text-cream mb-1">4:15 PM</div>
+                <div className="text-gold-light font-semibold">Cake Cutting & Coffee</div>
+                <p className="text-cream/70 text-sm mt-1">Celebrating the milestone with sweets and shared joy.</p>
+              </div>
+            </div>
+
+            {/* Afterwards - Dancing */}
+            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-gold-light bg-maroon text-gold-light font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                <Sparkles className="w-5 h-5" />
+              </div>
+              <div className="w-[calc(100%-4rem)] md:w-[45%] p-4 rounded border border-gold-light/20 bg-maroon/50">
+                <div className="font-bold text-cream mb-1">Afterwards</div>
+                <div className="text-gold-light font-semibold">Music & Dancing</div>
+                <p className="text-cream/70 text-sm mt-1">Opening the floor for everyone to dance together.</p>
+              </div>
+            </div>
+
           </div>
         </section>
 
         {/* Footer */}
         <footer className="bg-maroon px-6 py-8 text-center">
           <p className="font-script text-gold-light text-3xl mb-2">With Love</p>
-          <p className="font-body text-cream/80 text-base">The Family of Onnesha</p>
+          <p className="font-body text-cream/80 text-base">Shamir Sen</p>
+          <p className="font-body text-cream/80 text-base">Utpala Sen</p>
+          <p className="font-body text-cream/80 text-base">Orindom Sagor Sen</p>
           <img src={divider} alt="" width={150} height={30} loading="lazy" className="mx-auto mt-4 opacity-50 w-28" />
         </footer>
       </div>
