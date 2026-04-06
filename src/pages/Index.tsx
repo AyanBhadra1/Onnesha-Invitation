@@ -20,6 +20,9 @@ const Index = () => {
             </button>
             <h1 className="font-display text-4xl md:text-5xl font-bold tracking-wide mb-1">
               {isBangla ? "অন্বেষার ১৮" : "ONNESHA'S 18"}<sup className="text-lg">{isBangla ? "তম" : "TH"}</sup>
+               <span className="ml-2">
+    {isBangla ? "জন্মদিন" : "BIRTHDAY"}
+  </span>
             </h1>
             <img src={divider} alt="" width={300} height={60} className="mx-auto my-4 opacity-80" />
             <p className="font-body text-lg leading-relaxed text-cream opacity-90 max-w-sm mx-auto">
@@ -142,22 +145,14 @@ const Index = () => {
             <div className="relative">
               <div className="absolute -left-[35px] mt-1 flex items-center justify-center w-4 h-4 rounded-full bg-gold-light" />
               <div className="font-bold text-cream">2:30 PM</div>
-              <div className="text-gold-light font-semibold mb-3 uppercase tracking-tighter">{isBangla ? "সাংস্কৃতিক অনুষ্ঠান" : "Grand Show Program"}</div>
-              <div className="space-y-3 text-sm border-l border-gold-light/30 pl-4 ml-1">
-                <div><span className="text-gold-light font-medium">{isBangla ? "উদ্বোধনী নৃত্য:" : "Opening Dance:"}</span> <span className="text-cream">{isBangla ? "ময়ূরী — মেডলি (ও রে প্রিয়া)" : "Moyuri — Medley (O Re Priya)"}</span></div>
-                <div><span className="text-gold-light font-medium">{isBangla ? "সংগীত:" : "Vocal:"}</span> <span className="text-cream">{isBangla ? "পরিবারের সদস্যদের পরিবেশনায় — আনন্দলোকে" : "Extended Family — Anondo Lokee"}</span></div>
-                <div><span className="text-gold-light font-medium">{isBangla ? "শুভেচ্ছা বক্তব্য:" : "Speech:"}</span> <span className="text-cream">{isBangla ? "বাবা-মায়ের বক্তব্য" : "Message from Parents"}</span></div>
-                <div><span className="text-gold-light font-medium">{isBangla ? "ভরতনাট্যম নৃত্য:" : "Bharatanatyam:"}</span> <span className="text-cream">{isBangla ? "রিচা কুমারী" : "Richa Kumari"}</span></div>
-                <div><span className="text-gold-light font-medium">{isBangla ? "সংগীত:" : "Vocal:"}</span> <span className="text-cream">{isBangla ? "সৈকত আঙ্কেল" : "Saikat Uncle"}</span></div>
-                <div><span className="text-gold-light font-medium">{isBangla ? "যুগল নৃত্য:" : "Dance:"}</span> <span className="text-cream">{isBangla ? "সাইমা ও অন্বেষা — মেডলি" : "Saima & Onnesha — Medley"}</span></div>
-                <div><span className="text-gold-light font-medium">{isBangla ? "বেহালা বাদন:" : "Violin:"}</span> <span className="text-cream">{isBangla ? "শ্রুতি" : "Shruti"}</span></div>
-                <div><span className="text-gold-light font-medium">{isBangla ? "নৃত্য:" : "Dance:"}</span> <span className="text-cream">{isBangla ? "অদিতি চাচি ও টুপুর" : "Auditi Aunty & Tupur"}</span></div>
-                <div><span className="text-gold-light font-medium">{isBangla ? "সংগীত:" : "Vocal:"}</span> <span className="text-cream">{isBangla ? "টুলটুল" : "Tultul"}</span></div>
-                <div><span className="text-gold-light font-medium">{isBangla ? "নৃত্য:" : "Dance:"}</span> <span className="text-cream">{isBangla ? "সোহেলী কাকি" : "Soheli Aunty"}</span></div>
-                <div><span className="text-gold-light font-medium">{isBangla ? "বক্তব্য:" : "Speech:"}</span> <span className="text-cream">{isBangla ? "গাব্রিয়েলা ও বিশেষ অতিথি" : "Gabriele & Special Guest"}</span></div>
-                <div><span className="text-gold-light font-medium">{isBangla ? "নৃত্য:" : "Dance:"}</span> <span className="text-cream">{isBangla ? "ময়ূরী — মেডলি" : "Moyuri — Medley"}</span></div>
-                <div><span className="text-gold-light font-medium">{isBangla ? "চমক:" : "Surprise:"}</span> <span className="text-cream">{isBangla ? "গেম ও আনন্দ আয়োজন" : "Interactive Dance & Games"}</span></div>
+              <div className="text-gold-light font-semibold mb-1 uppercase tracking-tighter">
+                {isBangla ? "সাংস্কৃতিক অনুষ্ঠান" : "Grand Cultural Program"}
               </div>
+              <p className="text-cream/70 text-sm italic">
+                {isBangla 
+                  ? "গান, নাচ এবং বিশেষ আয়োজনে ভরপুর একটি মনোজ্ঞ সাংস্কৃতিক বিকাল।" 
+                  : "A delightful evening of music, dance, and special performances."}
+              </p>
             </div>
             <div className="relative">
               <div className="absolute -left-[35px] mt-1 flex items-center justify-center w-4 h-4 rounded-full bg-gold-light" />
