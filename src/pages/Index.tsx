@@ -46,7 +46,7 @@ const Index = () => {
             <div className="flex items-center justify-center gap-3">
               <MapPin className="w-5 h-5 text-gold-light flex-shrink-0" />
               <a 
-                href="https://maps.app.goo.gl/P6G9Vq4h9fV9Q9f9" 
+                href="https://maps.google.com/?cid=4272021748545770113&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-cream underline decoration-gold-light/40 hover:text-gold-light transition-colors cursor-pointer"
