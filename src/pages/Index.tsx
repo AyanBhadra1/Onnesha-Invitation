@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { MapPin, Calendar, Clock, Sparkles, Heart } from "lucide-react";
 import divider from "@/assets/divider.png";
 import ScrapbookCollage from "@/components/ScrapbookCollage";
 
 const Index = () => {
+  const [isBangla, setIsBangla] = useState(false);
   return (
     <div className="min-h-screen bg-background">
       <div className="max-w-lg mx-auto">
@@ -86,7 +88,15 @@ const Index = () => {
         <section className="bg-maroon-deep text-primary-foreground px-6 py-10">
           <div className="text-center mb-8">
             <Sparkles className="w-6 h-6 text-gold-light mx-auto mb-3" />
-            <h2 className="font-display text-2xl font-bold tracking-widest uppercase">Program Schedule</h2>
+            <h2 className="font-display text-2xl font-bold tracking-widest uppercase">
+              {isBangla ? "অনুষ্ঠানসূচী" : "Program Schedule"}
+            </h2>
+            <button 
+              onClick={() => setIsBangla(!isBangla)}
+              className="mt-4 px-6 py-2 border-2 border-gold-light text-gold-light rounded-full text-sm font-bold active:scale-95 transition-all bg-maroon/20"
+            >
+              {isBangla ? "VIEW IN ENGLISH" : "বাংলায় দেখুন"}
+            </button>
             <p className="font-script text-gold-light text-xl mt-1">A Day of Joy & Celebration</p>
           </div>
 
@@ -96,37 +106,47 @@ const Index = () => {
             <div className="relative">
               <div className="absolute -left-[35px] mt-1 flex items-center justify-center w-4 h-4 rounded-full bg-gold-light" />
               <div className="font-bold text-cream">12:30 PM</div>
-              <div className="text-gold-light font-semibold uppercase tracking-tight">Welcome Greeting</div>
-              <p className="text-cream/70 text-sm mt-1">A warm reception for our arriving guests.</p>
+              <div className="text-gold-light font-semibold uppercase tracking-tight">
+                {isBangla ? "অভ্যর্থনা ও আপ্যায়ন" : "Welcome Greeting"}
+              </div>
+              <p className="text-cream/70 text-sm mt-1">
+                {isBangla ? "আমন্ত্রিত অতিথিদের সাদর অভ্যর্থনা।" : "A warm reception for our arriving guests."}
+              </p>
             </div>
 
             {/* 1:00 PM - Lunch */}
             <div className="relative">
               <div className="absolute -left-[35px] mt-1 flex items-center justify-center w-4 h-4 rounded-full bg-gold-light" />
               <div className="font-bold text-cream">1:00 PM</div>
-              <div className="text-gold-light font-semibold uppercase tracking-tight">Festive Luncheon</div>
-              <p className="text-cream/70 text-sm mt-1">A grand lunch shared with friends and family.</p>
+              <div className="text-gold-light font-semibold uppercase tracking-tight">
+                {isBangla ? "প্রীতিভোজ" : "Festive Luncheon"}
+              </div>
+              <p className="text-cream/70 text-sm mt-1">
+                {isBangla ? "বন্ধু-বান্ধব ও আত্মীয়-স্বজনের সাথে মধ্যাহ্নভোজ।" : "A grand lunch shared with friends and family."}
+              </p>
             </div>
 
             {/* 2:30 PM - Show Program */}
             <div className="relative">
               <div className="absolute -left-[35px] mt-1 flex items-center justify-center w-4 h-4 rounded-full bg-gold-light" />
               <div className="font-bold text-cream">2:30 PM</div>
-              <div className="text-gold-light font-semibold mb-3 uppercase tracking-tighter">Grand Show Program</div>
+              <div className="text-gold-light font-semibold mb-3 uppercase tracking-tighter">
+                {isBangla ? "সাংস্কৃতিক অনুষ্ঠান" : "Grand Show Program"}
+              </div>
               <div className="space-y-3 text-sm border-l border-gold-light/30 pl-4 ml-1">
-                <div><span className="text-gold-light font-medium">Opening Dance:</span> <span className="text-cream">Moyuri — Medley (O Re Priya)</span></div>
-                <div><span className="text-gold-light font-medium">Vocal:</span> <span className="text-cream">Extended Family — Anondo Lokee</span></div>
-                <div><span className="text-gold-light font-medium">Speech:</span> <span className="text-cream">Message from Parents</span></div>
-                <div><span className="text-gold-light font-medium">Bharatanatyam:</span> <span className="text-cream">Richa Kumari</span></div>
-                <div><span className="text-gold-light font-medium">Vocal:</span> <span className="text-cream">Saikat Uncle</span></div>
-                <div><span className="text-gold-light font-medium">Dance:</span> <span className="text-cream">Saima & Onnesha — Medley</span></div>
-                <div><span className="text-gold-light font-medium">Violin:</span> <span className="text-cream">Shruti</span></div>
-                <div><span className="text-gold-light font-medium">Dance:</span> <span className="text-cream">Auditi Aunty & Tupur</span></div>
-                <div><span className="text-gold-light font-medium">Vocal:</span> <span className="text-cream">Tultul</span></div>
-                <div><span className="text-gold-light font-medium">Dance:</span> <span className="text-cream">Soheli Aunty</span></div>
-                <div><span className="text-gold-light font-medium">Speech:</span> <span className="text-cream">Special Guest & Gabriele</span></div>
-                <div><span className="text-gold-light font-medium">Dance:</span> <span className="text-cream">Moyuri — Medley</span></div>
-                <div><span className="text-gold-light font-medium">Surprise:</span> <span className="text-cream">Interactive Dance & Games</span></div>
+                <div><span className="text-gold-light font-medium">{isBangla ? "উদ্বোধনী নৃত্য:" : "Opening Dance:"}</span> <span className="text-cream">{isBangla ? "ময়ূরী — মেডলি (ও রে প্রিয়া)" : "Moyuri — Medley (O Re Priya)"}</span></div>
+                <div><span className="text-gold-light font-medium">{isBangla ? "সংগীত:" : "Vocal:"}</span> <span className="text-cream">{isBangla ? "পরিবারের সদস্যদের পরিবেশনায় — আনন্দলোকে" : "Extended Family — Anondo Lokee"}</span></div>
+                <div><span className="text-gold-light font-medium">{isBangla ? "শুভেচ্ছা বক্তব্য:" : "Speech:"}</span> <span className="text-cream">{isBangla ? "বাবা-মায়ের বক্তব্য" : "Message from Parents"}</span></div>
+                <div><span className="text-gold-light font-medium">{isBangla ? "ভরতনাট্যম নৃত্য:" : "Bharatanatyam:"}</span> <span className="text-cream">{isBangla ? "রিচা কুমারী" : "Richa Kumari"}</span></div>
+                <div><span className="text-gold-light font-medium">{isBangla ? "সংগীত:" : "Vocal:"}</span> <span className="text-cream">{isBangla ? "সৈকত আঙ্কেল" : "Saikat Uncle"}</span></div>
+                <div><span className="text-gold-light font-medium">{isBangla ? "যুগল নৃত্য:" : "Dance:"}</span> <span className="text-cream">{isBangla ? "সাইমা ও অনন্যা — মেডলি" : "Saima & Onnesha — Medley"}</span></div>
+                <div><span className="text-gold-light font-medium">{isBangla ? "বেহালা বাদন:" : "Violin:"}</span> <span className="text-cream">{isBangla ? "শ্রুতি" : "Shruti"}</span></div>
+                <div><span className="text-gold-light font-medium">{isBangla ? "নৃত্য:" : "Dance:"}</span> <span className="text-cream">{isBangla ? "অদিতি  চাচি ও টুপুর" : "Auditi Aunty & Tupur"}</span></div>
+                <div><span className="text-gold-light font-medium">{isBangla ? "সংগীত:" : "Vocal:"}</span> <span className="text-cream">{isBangla ? "টুলটুল" : "Tultul"}</span></div>
+                <div><span className="text-gold-light font-medium">{isBangla ? "নৃত্য:" : "Dance:"}</span> <span className="text-cream">{isBangla ? "সোহেলী কাকি" : "Soheli Aunty"}</span></div>
+                <div><span className="text-gold-light font-medium">{isBangla ? "বক্তব্য:" : "Speech:"}</span> <span className="text-cream">{isBangla ? "গাব্রিয়েলা ও বিশেষ অতিথি" : "Gabriele & Special Guest"}</span></div>
+                <div><span className="text-gold-light font-medium">{isBangla ? "নৃত্য:" : "Dance:"}</span> <span className="text-cream">{isBangla ? "ময়ূরী — মেডলি" : "Moyuri — Medley"}</span></div>
+                <div><span className="text-gold-light font-medium">{isBangla ? "চমক:" : "Surprise:"}</span> <span className="text-cream">{isBangla ? "গেম ও আনন্দ আয়োজন" : "Interactive Dance & Games"}</span></div>
               </div>
             </div>
 
@@ -134,16 +154,24 @@ const Index = () => {
             <div className="relative">
               <div className="absolute -left-[35px] mt-1 flex items-center justify-center w-4 h-4 rounded-full bg-gold-light" />
               <div className="font-bold text-cream">4:15 PM</div>
-              <div className="text-gold-light font-semibold">Cake Cutting & Coffee</div>
-              <p className="text-cream/70 text-sm mt-1">Celebrating the milestone with sweets and shared joy.</p>
+              <div className="text-gold-light font-semibold uppercase">
+                {isBangla ? "কেক কাটা ও কফি আপ্যায়ন" : "Cake Cutting & Coffee"}
+              </div>
+              <p className="text-cream/70 text-sm mt-1">
+                {isBangla ? "১৮তম জন্মদিনের কেক কাটা ও সবার সাথে মিষ্টিমুখ।" : "Celebrating the milestone with sweets and shared joy."}
+              </p>
             </div>
 
             {/* Afterwards - Dancing */}
             <div className="relative">
               <div className="absolute -left-[35px] mt-1 flex items-center justify-center w-4 h-4 rounded-full bg-gold-light" />
               <div className="font-bold text-cream">Afterwards</div>
-              <div className="text-gold-light font-semibold">Music & Dancing</div>
-              <p className="text-cream/70 text-sm mt-1">Opening the floor for everyone to dance together.</p>
+              <div className="text-gold-light font-semibold uppercase">
+                {isBangla ? "নৃত্য ও গান" : "Music & Dancing"}
+              </div>
+              <p className="text-cream/70 text-sm mt-1">
+                {isBangla ? "সবার জন্য উন্মুক্ত নাচ ও গানের আসর।" : "Opening the floor for everyone to dance together."}
+              </p>
             </div>
           </div>
         </section>
