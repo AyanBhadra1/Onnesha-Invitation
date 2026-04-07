@@ -98,6 +98,12 @@ const Index = () => {
                 <p className="text-cream font-semibold tracking-wide">{isBangla ? "কাউসার ভূঁইয়া" : "Kawser Bhuiya"}</p>
               </div>
               <div>
+                <p className="text-gold-light font-script text-2xl mb-1">
+                  {isBangla ? "ফটোগ্রাফিতে:" : "Event Photographer:"}
+                </p>
+                <p className="text-cream font-semibold tracking-wide">{isBangla ? "রিকি কামেমান" : "Riki Kameman"}</p>
+              </div>
+              <div>
                 <p className="text-gold-light font-script text-2xl mb-1">{isBangla ? "সহযোগিতায়:" : "Event Support:"}</p>
                 <p className="text-cream font-semibold tracking-wide">
                  {isBangla ? "উৎপলা সেন ও অয়ন ভদ্র (কাজিন)" : "Utpala Sen & Ayan Bhadra (Cousin)"}
