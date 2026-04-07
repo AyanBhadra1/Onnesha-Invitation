@@ -99,7 +99,7 @@ const Index = () => {
               </div>
               <div>
                 <p className="text-gold-light font-script text-2xl mb-1">
-                  {isBangla ? "ফটোগ্রাফিতে:" : "Event Photographer:"}
+                  {isBangla ? "ফটোগ্রাফিতে:" : "Professional Photographer:"}
                 </p>
                 <p className="text-cream font-semibold tracking-wide">{isBangla ? "রিকি কামেমান" : "Riki Kameman"}</p>
               </div>
